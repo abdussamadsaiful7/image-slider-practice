@@ -16,7 +16,7 @@ const images =[
    
 ]
 
-
+const imgEl =document.getElementById('slider-img');
 let imgIndex = 0;
 setInterval(()=>{
     if(imgIndex === images.length){
@@ -24,6 +24,7 @@ setInterval(()=>{
     }
     const imgUrl =images[imgIndex];
     console.log(imgUrl);
+    imgEl.setAttribute('src', imgUrl);
 
     imgIndex ++;
 }, 1500);
